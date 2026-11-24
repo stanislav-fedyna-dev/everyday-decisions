@@ -9,6 +9,7 @@
   <a href="https://github.com/stanislav-fedyna-dev/everyday-decisions/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/stanislav-fedyna-dev/everyday-decisions?color=0E8F63"></a>
   <a href="https://github.com/stanislav-fedyna-dev/everyday-decisions/actions/workflows/validate.yml"><img alt="Validate" src="https://github.com/stanislav-fedyna-dev/everyday-decisions/actions/workflows/validate.yml/badge.svg"></a>
   <a href="https://agentskills.io"><img alt="Agent Skills format" src="https://img.shields.io/badge/Agent%20Skills-compatible-0E8F63"></a>
+  <a href="https://skills.sh/stanislav-fedyna-dev/everyday-decisions"><img alt="skills.sh installs" src="https://skills.sh/b/stanislav-fedyna-dev/everyday-decisions"></a>
   <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-blue"></a>
 </p>
 
@@ -123,6 +124,7 @@ Pairs well with a stress-test / devil's-advocate skill: use this one to decide, 
 .
 ├── .claude-plugin/
 │   ├── plugin.json            # Claude Code plugin manifest
+│   ├── icon.png               # listing icon (1024×1024)
 │   └── marketplace.json       # lets this repo act as its own marketplace
 ├── skills/
 │   └── everyday-decisions/
