@@ -1,0 +1,22 @@
+[
+  { "query": "which should I get, the 13 or 15 inch laptop? mostly browsing and some photo editing on trains", "should_trigger": true },
+  { "query": "I can't decide between the gym near work and the one near home", "should_trigger": true },
+  { "query": "just tell me what air fryer to buy, budget 120, family of 3", "should_trigger": true },
+  { "query": "Weekend plans: hike or museum + nice dinner? Weather looks iffy", "should_trigger": true },
+  { "query": "is it worth switching from my yearly streaming plan to monthly?", "should_trigger": true },
+  { "query": "допоможи вибрати зарядну станцію для квартири, щоб тягнула холодильник і роутер", "should_trigger": true },
+  { "query": "ayuda, no sé si comprar una bici eléctrica o seguir con el metro", "should_trigger": true },
+  { "query": "I keep going back and forth on whether to repaint the living room grey or keep the white", "should_trigger": true },
+  { "query": "Rent a 1-bed close to the centre or a 2-bed 30 minutes out? Lease is one year", "should_trigger": true },
+  { "query": "help me pick between three dentists, I have their prices and reviews pasted below", "should_trigger": true },
+  { "query": "my partner already decided we're buying the Volvo, poke holes in it before we sign", "should_trigger": false },
+  { "query": "what's the difference between OLED and mini-LED?", "should_trigger": false },
+  { "query": "which sorting algorithm should I use for nearly-sorted arrays in my Python code?", "should_trigger": false },
+  { "query": "I have chest pain and my left arm feels numb, should I go to the ER or wait?", "should_trigger": false },
+  { "query": "write a pros and cons list template for my blog post about decision making", "should_trigger": false },
+  { "query": "should our company migrate from Postgres to DynamoDB? here's our architecture doc", "should_trigger": false },
+  { "query": "summarize this article about the paradox of choice", "should_trigger": false },
+  { "query": "my sister and I fought about who hosts Christmas, how do I talk to her", "should_trigger": false },
+  { "query": "convert 26800 mAh at 3.7V to Wh", "should_trigger": false },
+  { "query": "draft a message telling my landlord I'm not renewing the lease", "should_trigger": false }
+]

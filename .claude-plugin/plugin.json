@@ -1,0 +1,12 @@
+{
+  "name": "everyday-decisions",
+  "description": "Makes one firm, defensible decision for everyday choices: purchases, home, travel, habits, how to spend time or money.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Stas"
+  },
+  "homepage": "https://github.com/stanislav-fedyna-dev/everyday-decisions",
+  "repository": "https://github.com/stanislav-fedyna-dev/everyday-decisions",
+  "license": "MIT",
+  "keywords": ["decision-making", "everyday", "shopping", "choices", "productivity", "skills"]
+}

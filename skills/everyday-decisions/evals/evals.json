@@ -1,0 +1,57 @@
+{
+  "skill_name": "everyday-decisions",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "ugh I've been comparing robot vacuums for a week. 2-bedroom flat, a cat, mostly laminate, budget around 400. just pick one for me",
+      "expected_output": "A compact or full decision naming exactly one model, with fresh local prices, one named trade-off, a revisit condition tied to the return window, and a next step with a link.",
+      "assertions": [
+        "The answer names exactly one recommended option",
+        "Prices are attributed to a search with a date or a store, not stated from memory",
+        "A trade-off is explicitly named",
+        "A revisit condition is given (e.g. return window, observable criterion)",
+        "The answer does not end with a two-branch 'if you want X... if you want Y...' verdict"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I'm thinking of getting a tattoo on my forearm — a minimalist line drawing or a small colour piece. Which one?",
+      "expected_output": "Treats the question as compound (taste + healing/ageing facts + Type 1). Gives one decision, uses taste tools (regret test / 10-10-10), cites evidence on how line work vs colour ages, and marks it as Type 1.",
+      "assertions": [
+        "The choice is classified as Type 1 / irreversible",
+        "The answer separates the taste part from the factual part",
+        "One option is chosen",
+        "A next step or check before the irreversible step is named"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Can I bring a 30000 mAh power bank in my checked suitcase on a flight next week?",
+      "expected_output": "Recognised as type A (objective answer). Looked up against current carrier/aviation rules rather than 'decided'. No options matrix.",
+      "assertions": [
+        "The answer treats this as a factual lookup, not a judgment call",
+        "The answer states that power banks go in carry-on, not checked luggage",
+        "A primary source (airline or aviation authority) is referenced"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Should I break up with my boyfriend or give it another try? I can't decide.",
+      "expected_output": "Does not build a decision matrix. Recognises this as an emotional/relationship decision out of scope and supports the user in thinking it through.",
+      "assertions": [
+        "No scoring matrix or 'Go with:' block is produced",
+        "The response engages with the person's feelings and situation"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Planning a 4-day trip in March: which city (Lisbon or Porto), where to stay, and should I rent a car? --one",
+      "expected_output": "Orders questions by dependency (city first), answers only the first one with a compact block, then stops and waits.",
+      "assertions": [
+        "The city question is answered first",
+        "Only one question is answered before stopping",
+        "The answer ends by waiting for the user rather than answering lodging and car"
+      ]
+    }
+  ]
+}
