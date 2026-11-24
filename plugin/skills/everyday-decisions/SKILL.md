@@ -4,7 +4,7 @@ description: Makes one firm, defensible decision for everyday choices (purchases
 license: MIT
 metadata:
   author: Stanislav Fedyna
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Everyday Decisions: decide, don't dither

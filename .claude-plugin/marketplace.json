@@ -5,13 +5,13 @@
   },
   "metadata": {
     "description": "Everyday decision-making skill for Claude and other agents",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "plugins": [
     {
       "name": "everyday-decisions",
       "description": "Makes one firm, defensible decision for everyday choices: purchases, home, travel, habits, how to spend time or money.",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "source": "./plugin",
       "author": {
         "name": "Stanislav Fedyna"
