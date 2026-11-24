@@ -115,8 +115,12 @@ Pairs well with a stress-test / devil's-advocate skill: use this one to decide, 
 
 ## What it won't do
 
-- Replace a doctor, lawyer or financial adviser. In those zones it still decides, but marks one step as **"check before <step>"**. Money-related answers are information for your decision, not financial advice.
+- Replace a doctor, lawyer or financial adviser. In those zones it still decides, but marks one step as **"check before <step>"** and says plainly that the answer is not professional medical, legal or financial advice.
 - Handle emergencies or relationship conflicts. Those aren't choices between options.
+
+## Disclaimer
+
+This skill gives general information to help you make everyday choices. **It is not professional medical, legal or financial advice.** For health questions, see a doctor; before signing contracts, get legal advice; for investments, talk to a licensed financial adviser. In emergencies, contact local emergency services.
 
 ## Repository layout
 

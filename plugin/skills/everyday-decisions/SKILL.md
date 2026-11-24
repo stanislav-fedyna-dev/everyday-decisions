@@ -52,7 +52,12 @@ The skill **always** decides. In three zones, though, a mistake is costly and in
 - **Legal and contractual** (lease, car purchase, self-employment, taxes) → read the contract or get advice before signing.
 - **Big money and expensive Type 1** → before paying, get one independent check (e.g. a pre-purchase mechanic inspection) or run a stress-test.
 
-In these zones the skill does not say "consult a professional" *instead of* answering. It makes the decision and holds back only **one named irreversible step** until it is checked. Financial choices are information for the user's own decision, not advice from a licensed financial adviser; label them that way.
+In these zones the skill does not say "consult a professional" *instead of* answering. It makes the decision and holds back only **one named irreversible step** until it is checked.
+
+Every answer in these zones must include one plain line saying what it is not:
+- Health: "This is not professional medical advice." Give general information and a choice between everyday options; never a diagnosis or a conclusion about what is wrong with the person.
+- Legal: "This is not legal advice."
+- Money: "This is information for your decision, not advice from a licensed financial adviser."
 
 ## Modes
 
@@ -143,7 +148,7 @@ Full form:
 - **Confidence**: `high`, or `medium` (options were close and a tie-break decided it; name which one) + the weak spot from the robustness check.
 - **Next concrete step**: where to buy / what to book / whom to message, with a link and today's price.
 - **Revisit condition**: "right if <observable> by <when>; revisit if <new fact>" (price drops below N, a new revision ships, unused for 2 weeks → return it).
-- **Status**: `decided`, or `decided — check before <step>` (only for the zones in "Limits of autonomy").
+- **Status**: `decided`, or `decided — check before <step>` (only for the zones in "Limits of autonomy"; then also add that zone's not-advice line).
 
 Compact block for low-cost Type 2:
 
