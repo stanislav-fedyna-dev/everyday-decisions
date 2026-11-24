@@ -1,4 +1,22 @@
-# everyday-decisions
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/assets/banner-dark.svg">
+    <img alt="everyday-decisions: Decide, don't dither. Three options converge into one decision: Go with B." src=".github/assets/banner-light.svg" width="100%">
+  </picture>
+</p>
+
+<p align="center">
+  <a href="https://github.com/stanislav-fedyna-dev/everyday-decisions/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/stanislav-fedyna-dev/everyday-decisions?color=0E8F63"></a>
+  <a href="https://github.com/stanislav-fedyna-dev/everyday-decisions/actions/workflows/validate.yml"><img alt="Validate" src="https://github.com/stanislav-fedyna-dev/everyday-decisions/actions/workflows/validate.yml/badge.svg"></a>
+  <a href="https://agentskills.io"><img alt="Agent Skills format" src="https://img.shields.io/badge/Agent%20Skills-compatible-0E8F63"></a>
+  <a href="LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-blue"></a>
+</p>
+
+<p align="center">
+  <a href="#install">Install</a> · <a href="#how-it-works">How it works</a> · <a href="#usage">Usage</a> · <a href="skills/everyday-decisions/SKILL.md">Read the skill</a>
+</p>
+
+---
 
 **An agent skill that makes everyday decisions for you, and shows its work.**
 
@@ -6,18 +24,36 @@ You ask "X or Y?". Instead of a pros-and-cons list that leaves you where you sta
 
 Works with Claude (claude.ai, Claude Code, API) and any agent that supports the open [Agent Skills](https://agentskills.io) format.
 
+<!-- DEMO: replace this comment with the demo video (drag the .mp4 into GitHub's editor) -->
+
 ```text
 You:   Robot vacuum for a 2-bed flat with a cat, mostly laminate, ~400 budget. Just pick one.
 
 Agent: Go with: <Model A> · trade-off · Type 2 (30-day returns)
-       Why: Best hair handling in its class (independent test, moderate); 
+       Why: Best hair handling in its class (independent test, moderate);
             <price> at <store> today, checked <date>.
        Trade-off: louder than <Model B>.
        Revisit if: it tangles on the cat's hair more than once a week → return within 30 days.
        Next step: <link>
 ```
 
-## Why it works
+## How it works
+
+```mermaid
+flowchart LR
+    Q["Your question"] --> R["Reframe<br/>choose X for Y, given Z"]
+    R --> T{"What kind of<br/>question?"}
+    T -->|"A · objective"| A["Look it up<br/>primary source"]
+    T -->|"B · trade-off"| B["Criteria → score<br/>→ robustness check"]
+    T -->|"C/D · experience"| C["Research + most<br/>reversible trial"]
+    T -->|"E · values"| E["Regret test<br/>10/10/10"]
+    A & B & C & E --> V{"Reversible?"}
+    V -->|"Type 2"| S["Compact answer"]
+    V -->|"Type 1"| F["Full write-up<br/>premortem + check-before"]
+    S & F --> D["✅ One decision<br/>trade-off · revisit condition · next step"]
+```
+
+### Why it works
 
 Most everyday choices don't stall for lack of information. They stall for lack of method. The skill picks the method from the **nature of the question**, not its topic:
 
@@ -99,7 +135,8 @@ Pairs well with a stress-test / devil's-advocate skill: use this one to decide, 
 │           └── trigger-queries.json # should / shouldn't trigger
 ├── scripts/
 │   ├── validate.py            # spec checks (also runs in CI)
-├── .github/                   # CI, auto-release on tag, issue template
+│   ├── make_banner.py         # regenerates the animated banners
+├── .github/                   # CI, release workflow, issue template, README assets
 ├── CHANGELOG.md
 ├── LICENSE
 └── README.md
