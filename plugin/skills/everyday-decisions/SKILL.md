@@ -3,7 +3,7 @@ name: everyday-decisions
 description: Makes one firm, defensible decision for everyday choices (purchases, home, travel, food, habits, how to spend time or money) when there are several options and the user wants a verdict, not a pros-and-cons list. Use when the user says "help me choose", "which should I get", "X or Y?", "I can't decide", "just tell me what to buy", compares products, plans or places, or keeps going back and forth, even if they never say "decide". Classifies the question and how reversible it is, checks fresh facts and prices, and returns one recommendation with its trade-off and a condition for revisiting. Not for stress-testing a choice the user has already made, business or software-architecture decisions, emergencies, medical or legal crises, or relationship conflicts.
 license: MIT
 metadata:
-  author: Stas
+  author: Stanislav Fedyna
   version: "1.0.0"
 ---
 

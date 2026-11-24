@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Package skill
-        run: cd skills && zip -r ../everyday-decisions.zip everyday-decisions
+        run: cd plugin/skills && zip -r ../../everyday-decisions.zip everyday-decisions
       - name: Publish release
         env:
           GH_TOKEN: ${{ github.token }}

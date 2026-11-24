@@ -1,7 +1,7 @@
 {
   "name": "everyday-decisions",
   "owner": {
-    "name": "Stas"
+    "name": "Stanislav Fedyna"
   },
   "metadata": {
     "description": "Everyday decision-making skill for Claude and other agents",
@@ -12,8 +12,10 @@
       "name": "everyday-decisions",
       "description": "Makes one firm, defensible decision for everyday choices: purchases, home, travel, habits, how to spend time or money.",
       "version": "1.0.0",
-      "source": "./",
-      "author": { "name": "Stas" }
+      "source": "./plugin",
+      "author": {
+        "name": "Stanislav Fedyna"
+      }
     }
   ]
 }

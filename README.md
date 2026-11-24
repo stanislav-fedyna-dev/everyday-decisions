@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="#install">Install</a> · <a href="#how-it-works">How it works</a> · <a href="#usage">Usage</a> · <a href="skills/everyday-decisions/SKILL.md">Read the skill</a>
+  <a href="#install">Install</a> · <a href="#how-it-works">How it works</a> · <a href="#usage">Usage</a> · <a href="plugin/skills/everyday-decisions/SKILL.md">Read the skill</a>
 </p>
 
 ---
@@ -96,7 +96,7 @@ npx skills add stanislav-fedyna-dev/everyday-decisions
 ```
 
 ### Manually
-Copy `skills/everyday-decisions/` into your agent's skills folder, e.g. `~/.claude/skills/everyday-decisions/`.
+Copy `plugin/skills/everyday-decisions/` into your agent's skills folder, e.g. `~/.claude/skills/everyday-decisions/`.
 
 ## Usage
 
@@ -123,21 +123,21 @@ Pairs well with a stress-test / devil's-advocate skill: use this one to decide, 
 ```text
 .
 ├── .claude-plugin/
-│   ├── plugin.json            # Claude Code plugin manifest
-│   ├── icon.png               # listing icon (1024×1024)
 │   └── marketplace.json       # lets this repo act as its own marketplace
-├── skills/
-│   └── everyday-decisions/
-│       ├── SKILL.md           # the skill (frontmatter + instructions)
-│       ├── LICENSE.txt
-│       ├── references/
-│       │   └── worked-examples.md   # loaded on demand
-│       └── evals/
-│           ├── evals.json           # output-quality test cases
-│           └── trigger-queries.json # should / shouldn't trigger
+├── plugin/                    # the plugin itself (what gets installed)
+│   ├── .claude-plugin/
+│   │   ├── plugin.json        # Claude Code plugin manifest
+│   │   └── icon.png           # listing icon (1024×1024)
+│   ├── skills/
+│   │   └── everyday-decisions/
+│   │       ├── SKILL.md       # the skill (frontmatter + instructions)
+│   │       ├── references/    # worked examples, loaded on demand
+│   │       └── evals/         # quality and trigger test cases
+│   ├── README.md
+│   └── LICENSE
 ├── scripts/
 │   ├── validate.py            # spec checks (also runs in CI)
-│   ├── make_banner.py         # regenerates the animated banners
+│   └── make_banner.py         # regenerates the animated banners
 ├── .github/                   # CI, release workflow, issue template, README assets
 ├── CHANGELOG.md
 ├── LICENSE
@@ -150,7 +150,7 @@ Pairs well with a stress-test / devil's-advocate skill: use this one to decide, 
 python scripts/validate.py   # frontmatter and file checks per the Agent Skills spec
 ```
 
-Behaviour tests live in `skills/everyday-decisions/evals/`: `evals.json` (output quality, with assertions) and `trigger-queries.json` (should / shouldn't activate). Run each prompt with and without the skill and compare, as described in [Evaluating skills](https://agentskills.io/skill-creation/evaluating-skills).
+Behaviour tests live in `plugin/skills/everyday-decisions/evals/`: `evals.json` (output quality, with assertions) and `trigger-queries.json` (should / shouldn't activate). Run each prompt with and without the skill and compare, as described in [Evaluating skills](https://agentskills.io/skill-creation/evaluating-skills).
 
 ## Contributing
 

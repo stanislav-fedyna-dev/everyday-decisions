@@ -5,7 +5,7 @@ import yaml
 
 root = pathlib.Path(__file__).resolve().parent.parent
 errors = []
-for skill_md in sorted(root.glob("skills/*/SKILL.md")):
+for skill_md in sorted(root.glob("plugin/skills/*/SKILL.md")):
     d = skill_md.parent
     text = skill_md.read_text(encoding="utf-8")
     parts = text.split("---", 2)
@@ -33,7 +33,7 @@ for skill_md in sorted(root.glob("skills/*/SKILL.md")):
         except ValueError as e: errors.append(f"{j}: invalid JSON ({e})")
     print(f"checked {d.name}: {lines} lines, description {len(desc)} chars")
 
-for j in root.glob(".claude-plugin/*.json"):
+for j in list(root.glob(".claude-plugin/*.json")) + list(root.glob("plugin/.claude-plugin/*.json")):
     try: json.loads(j.read_text(encoding="utf-8"))
     except ValueError as e: errors.append(f"{j}: invalid JSON ({e})")
 
